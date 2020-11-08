@@ -304,3 +304,35 @@
     - Access modifiers allow classes to encapsulate data
     - Java is platform independent, compiling to bytecode. It is robust and simple by not providing pointers or operator overloading
     - Java is secure because it runs inside a virtual machine.
+    
+ ## Chapter 2: Operators and Statements
+  - Java operators:
+    - A Java operator is special symbol use for set of variables, value or literals referred to operands and returns a result
+    - There are three types: **unary, binary, and ternary**
+        <pre>
+        int y = 4;
+        double x = 3 + 2 * --y;</pre>
+   
+    - Order of operator precedence:
+        <pre>
+        <b>Operator</b>                                <b>Symbols and examples</b>
+        
+        Post-unary operators                    expression++, expression--
+        Pre-unary operators                     ++expression, --expression
+        Other unary operators                   +, -, !
+        Multiplication/Division/Modulus         *, /, %
+        Addition/Subtraction                    +, -
+        Shift operators                         <<, >>, >>>
+        Relational operators                    <, >, <=, >=, instanceof 
+        Equal to/not equal to                   ==, !=
+        Logical operators                       &, ^, | 
+        Short-circuit logical operators         &&, ||
+        Ternary operators                       boolean expression ? expression1 : expression2
+        Assignment operators                    =, +=, -=, *=, /=, %=, &=, ^=, !=, <<=, >>=, >>>=</pre>
+  - Binary Arithmetic Operators:
+  - Unary Operators:
+  - Additional Binary Operators:
+  - Java statements:
+  - Flow control:
+
+### Summary
