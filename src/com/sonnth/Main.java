@@ -1,7 +1,6 @@
 package com.sonnth;
 
-import com.sonnth.operators.Operator;
-import com.sonnth.operators.OperatorEnum;
+import com.sonnth.object.Person;
 
 /*
  * Main method is the gateway between the startup of a Java process
@@ -9,6 +8,11 @@ import com.sonnth.operators.OperatorEnum;
  */
 public class Main {
     public static void main(String... $n) {
-        System.out.println(Operator.operate(5,0, OperatorEnum.NOT));
+        Person son = new Person("Son");
+        Person son1 = son;
+        son = null;
+        System.out.println(son1);
+        System.out.println(son);
     }
+
 }
