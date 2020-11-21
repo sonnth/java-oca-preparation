@@ -783,3 +783,180 @@
     - The switch statement is the only one that supports a variety of data types, including String variables as of Java 7.
     - With a for-each statement you don’t need to explicitly write a boolean expression
     - Control flow when nested loops, break statements, and continue statements
+    
+    
+    
+ ## Chapter 3: Core Java APIs
+  - Creating and Manipulating Strings:
+    - Concatenation
+    
+       - If both operands are numeric, + means numeric addition.
+       - If either operand is a String, + means concatenation. 
+       - The expression is evaluated left to right.
+    
+    - Immutability
+    
+        - Once a String object is created, it is not allowed to change
+
+    - The String Pool
+        
+        - Strings can use up a lot of memory(25-40% memory of program) 
+            
+            => The String Pool (intern pool) reusing common ones, location in JVM and collects all these strings.
+            
+        - The String Pool contains literal values appear
+        
+            "string" is a literal and therefore goes into the string pool. 
+            
+            myObject.toString() is a string but not a literal => does not go into the string pool. 
+            
+            Strings not in the string pool are garbage collected just like any other object.
+        
+    - String methods
+    
+        - String is a sequence of characters count from 0 when indexed
+        
+        - There are 13 methods from the String class
+            - **length()**: number of characters in the String
+                
+                Sample:
+                ```
+                String string = "animals";
+                System.out.println(string.length()); // 7
+                ```
+            - **charAt()**: query the string to find out what character is at a specific index
+
+                Sample:
+                ```
+                String string = "animals"; 
+                System.out.println(string.charAt(0)); // a 
+                System.out.println(string.charAt(6)); // s 
+                System.out.println(string.charAt(7)); // throws java.lang.StringIndexOutOfBoundsException
+                ```
+            - **indexOf()**: looks at the characters in the string and finds the first index that matches the desired value
+                
+                The method signatures:
+                ```
+                int indexOf(char ch)
+                int indexOf(char ch, index fromIndex) 
+                int indexOf(String str)
+                int indexOf(String str, index fromIndex)
+                ```
+
+                Sample:
+                ```
+                String string = "animals"; 
+                System.out.println(string.indexOf('a'));  // 0
+                System.out.println(string.indexOf("al")); // 4 
+                System.out.println(string.indexOf('a', 4)); // 4 
+                System.out.println(string.indexOf("al", 5)); // -1
+              
+            - **substring()**: looks at the characters in the string and finds the first index that matches the desired value
+                
+                The method signatures:
+                ```
+                int substring(int beginIndex)
+                int substring(int beginIndex, int endIndex)
+                ```
+
+                Sample:
+                ```
+                String string = "animals"; 
+                System.out.println(string.substring(3)); // mals 
+                System.out.println(string.substring(string.indexOf('m'))); // mals 
+                System.out.println(string.substring(3, 4)); // m 
+                System.out.println(string.substring(3, 7)); // mals
+                System.out.println(string.substring(3, 3)); // empty string 
+                System.out.println(string.substring(3, 2)); // throws exception 
+                System.out.println(string.substring(3, 8)); // throws exception
+                ```  
+              
+            - **toLowerCase() and toUpperCase()**: converts any lowercase, uppercase characters to uppercase or lowercase in the returned string
+            
+            - **equals() and equalsIgnoreCase()**: 
+            
+                The equals() method checks whether two String objects contain exactly the same characters in the same order
+                
+                The equalsIgnoreCase() method checks whether two String objects contain the same characters with the exception that it will convert the characters’ case if needed
+                
+                The method signatures:
+                ```
+                boolean equals(String str)
+                boolean equalsIgnoreCase(String str)
+                ```
+
+                Sample:
+                ```
+                System.out.println("abc".equals("ABC")); // false 
+                System.out.println("ABC".equals("ABC")); // true 
+                System.out.println("abc".equalsIgnoreCase("ABC")); // true
+                ```
+            
+            - **startsWith() and endsWith()**: look at whether the provided value matches part of the String
+                
+                The method signatures:
+                ```
+                boolean startsWith(String prefix)
+                boolean endsWith(String suffix)
+                ```
+
+                Sample:
+                ```
+                System.out.println("abc".startsWith("a")); // true 
+                System.out.println("abc".startsWith("A")); // false 
+                System.out.println("abc".endsWith("c")); // true 
+                System.out.println("abc".endsWith("a")); // false
+                ```
+            
+            - **contains()**: looks for matches in the String
+                
+                The method signatures:
+                ```
+                boolean contains(String str)
+                ```
+              
+                Sample:
+                ```
+                System.out.println("abc".contains("b")); // true
+                System.out.println("abc".contains("B")); // false
+                ```
+                The contains() method is a convenience method, do not have to write str.indexOf(otherString) != -1
+            
+            - **replace()**: does a simple search and replace on the string
+                
+                The method signatures:
+                ```
+                String replace(char oldChar, char newChar)
+                String replace(CharSequence oldChar, CharSequence newChar)
+                ```
+              
+                Sample:
+                ```
+                System.out.println("abcabc".replace('a', 'A')); // AbcAbc 
+                System.out.println("abcabc".replace("a", "A")); // AbcAbc
+                ```
+            
+            - **trim()**: method removes whitespace from the beginning and end of a String, whitespace consists of spaces along with the \t (tab) and \n (newline) characters. Other characters, such as \r (carriage return), are also included in what gets trimmed
+                
+                The method signatures:
+                ```
+                public String trim()
+                ```
+              
+                Sample:
+                ```
+                System.out.println("abc".trim()); // abc 
+                System.out.println("\t a b c\n".trim()); // a b c
+                ```
+            
+    - Method chaining
+    
+        This is just a series of String methods
+        
+        `String result = "AniMaL ".trim().toLowerCase().replace('a', 'A');`
+    
+  - Using the StringBuilder Class:
+  - Java Arrays:
+  - Java ArrayList:
+  - Dates and Times:
+  

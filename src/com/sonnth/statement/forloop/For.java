@@ -3,11 +3,11 @@ package com.sonnth.statement.forloop;
 public class For {
 
     public static void main(String[] args) {
-        int i;
-        for (i = 2; i < 4; i++) {
-
-
-        }
+        for(int i=0; i<10 ; ) {
+            i = i++ ;
+            i = i + 0;
+            System.out.println("Hello World" + i);
+            }
         System.out.println();
     }
 }

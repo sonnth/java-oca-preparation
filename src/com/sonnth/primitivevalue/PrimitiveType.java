@@ -11,10 +11,15 @@ public class PrimitiveType {
 //        System.out.println(z);
 //        System.out.println(t);
 //        System.out.print(2147483647+1); // -2147483648
-        int x = 4;
-        boolean bool = true == false;
-        long y = 3;
-        long z = x * y;
-        System.out.println(z);
+
+
+        int m = 9, n = 1, x = 0; while(m > n) {
+            m--;
+            n += 2;
+            x += m + n;
+        }
+        int s=1;
+        s += 1 + 2+3;
+        System.out.println(s);
     }
 }
