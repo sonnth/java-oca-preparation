@@ -101,10 +101,9 @@
             System.out.println("in constructor"); 
         }
         public void Chick() { } // NOT A CONSTRUCTOR                
-    }
-  </pre>
+    }</pre>
     
-   - Instance Initializer Blocks
+    - Instance Initializer Blocks
     
         There are three code blocks and one instance initializer.
         
@@ -115,15 +114,16 @@
         5: }
         6: { System.out.println("Snowy"); }
      </pre>
-   - Order of Initialization
+
+    - Order of Initialization
         - Fields and instance initializer blocks are run in the order in which they appear in the file.
         - The constructor runs after all fields and instance initializer blocks have run.
         Order matters for the fields and blocks of code. You can’t refer to a variable before it has been initialized:
         
         <pre>
         { System.out.println(name); } // DOES NOT COMPILE 
-        private String name = "Fluffy";
-     </pre>
+        private String name = "Fluffy";</pre>
+
   - Object References and Primitives
     
     Java applications contain two types of data: primitive types and reference types
@@ -254,6 +254,7 @@
   
     - Think of the acronym PIC (picture): package, import, and class. Fields and methods are easier to remember because they merely have to be inside of a class.
     - Multiple classes can be defined in the same file, but only one of them is allowed to be public
+  
   - Destroying Objects 
 
     - Garbage Collection: freeing memory on the heap by deleting objects that are no longer reachable
@@ -311,6 +312,7 @@
     - Java is secure because it runs inside a virtual machine.
     
  ## Chapter 2: Operators and Statements
+
   - Java operators:
     - A Java operator is special symbol use for set of variables, value or literals referred to operands and returns a result
     - There are three types: **unary, binary, and ternary**
@@ -334,6 +336,7 @@
         Short-circuit logical operators         &&, ||
         Ternary operators                       boolean expression ? expression1 : expression2
         Assignment operators                    =, +=, -=, *=, /=, %=, &=, ^=, !=, <<=, >>=, >>>=</pre>
+  
   - Binary Arithmetic Operators:
     - Arithmetic Operators: 
          
@@ -653,8 +656,7 @@
         datatype of collection member|Iterable collection of objects
         } -> Curly braces required for block of multiple statements, optional for single statement
         ```
-    
-    
+        
   - Flow control:
   
     The path taken during runtime may not be as straightforward => Control flow
@@ -785,7 +787,6 @@
     Labels are allowed for any block statement, including those that are preceded with an if-then statement.
        
 ### Summary
-
     - When you see an operator on the exam, always check that the appropriate data types are used and that they match each other where applicable.
     - Two types of control structures: decision-making controls structures, including if-then, if-then-else, and switch statements, as well as repetition control structures including for, for-each, while, and do-while
     - The switch statement is the only one that supports a variety of data types, including String variables as of Java 7.
@@ -795,6 +796,7 @@
     
     
  ## Chapter 3: Core Java APIs
+
   - Creating and Manipulating Strings:
     - Concatenation
     
@@ -1062,6 +1064,7 @@
         StringBuilder: writing new code that concatenates a lot of String objects together
         
         StringBuffer does the same thing but more slowly because it is thread safe
+  
   - Equality:
   
     - Use == to compare numbers and that object references refer to the same object.
@@ -1236,6 +1239,7 @@
             System.out.println();
         }
         ```
+
   - ArrayList: creating an ArrayList, common methods, autoboxing, conversion, and sorting.
     - Create ArrayList: three ways to create an ArrayList.
         ```
@@ -1710,6 +1714,7 @@
         System.out.println(date); // 2015-01-02 
         System.out.println(time); // 11:22
         ```
+
 ### Summary
     - Strings are immutable sequences of characters, concatenation operator (+) creates a new String
     - If either operand involved in the + expression is a String, concatenation is used; otherwise, addition is used. 
@@ -1743,3 +1748,38 @@
     - Dates and times can be manipulated using plusXXX or minusXXX methods
     - The Period class represents a number of days, months, or years to add or subtract from a LocalDate or LocalDateTime
     - DateTimeFormatter is used to output dates and times in the desired format. The date and time classes are all immutable, which means the return value must be used.
+
+ ## Chapter 4: Methods and Encapsulation
+
+  - Designing methods
+
+    ![method-signature](https://github.com/sonnth/java-oca-preparation/blob/develop/images/method-signature.png?raw=true)
+
+
+    
+
+  - Varargs
+
+
+  - Access Modifiers
+
+
+  - Passing data
+
+
+  - Overloading
+
+
+  - Constructor
+
+
+  - Encapsulation data
+
+
+  - Lambdas
+
+
+### Summary
+    - Sonnth
+
+    
