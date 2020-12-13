@@ -1,8 +1,5 @@
-package com.sonnth.staticmember;
+package com.sonnth.chapter4.staticmember;
 
-import java.util.List;
-
-import static java.util.Arrays.asList;
 import static java.lang.System.*;
 
 

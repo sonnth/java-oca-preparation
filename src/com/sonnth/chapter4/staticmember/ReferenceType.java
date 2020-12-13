@@ -1,4 +1,4 @@
-package com.sonnth.staticmember;
+package com.sonnth.chapter4.staticmember;
 
 public class ReferenceType {
     public void fly(String s) {

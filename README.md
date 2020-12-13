@@ -2281,8 +2281,120 @@
 
   - Lambdas
 
+    A lambda expression is a block of code that gets passed around, like an anonymous method. It has parameters and body but doesn't have name. 
 
-### Summary
-    - Sonnth
+    **Syntax**
+    - Lambda syntax omitting the optional parts
+        - Specify a single parameter with the name a
+        - The arrow operator to separate the parameter and body
+        - A body that calls a single method and returns the result of that method
+        ```
+        parameter name
+            ↓ 
+            a -> a.canHop()
+              ↑    ↑  
+            arrow  body
+        ```
 
+    - Lambda syntax, including optional parts
+        - Specify a single parameter with the name a and stating the type is Animal
+        - The arrow operator to separate the parameter and body
+        - A body that has one or more lines of code, including a semicolon and a return statement
+        ```
+                parameter name   |        body
+                        ↓        |         ↓ 
+                (Animal a) -> { return a.canHop(); }
+                    ↑            | ↑             ↑
+        optional parameter type  | required because in block
+        ```
+
+        Some valid lambdas:
+        ```
+        print(() -> true);  // 0 parameters 
+        print(a -> a.startsWith("test"));   // 1 parameter 
+        print((String a) -> a.startsWith("test"));  // 1 parameter 
+        print((a, b) -> a.startsWith("test"));  // 2 parameters 
+        print((String a, String b) -> a.startsWith("test"));    // 2 parameters
+        ```
+        Invalid lambdas:
+        ```
+        print(a, b -> a.startsWith("test"));    // DOES NOT COMPILE
+        print(a -> { a.startsWith("test"); });  // DOES NOT COMPILE
+        print(a -> { return a.startsWith("test") });    // DOES NOT COMPILE
+        ```
+        
+    **Predicate**
     
+    Lambdas work with interfaces that have only one method. These are called functional interfaces
+    
+    Function interfaces: interfaces that can be used with functional programming
+    
+    => Have to create many interface to use lambdas. This is the reason why java provides Predicate
+    
+    ```
+    public interface CheckFly<T> { 
+        boolean test(T t);
+    }
+    ```
+    
+    ```
+    public class SearchingBird  {
+        public static void main(String[] args) {
+            List<Bird> birds = new ArrayList<>();
+            birds.add(new Bird("chicken", true, false));
+            birds.add(new Bird("phoenix", true, false));
+            birds.add(new Bird("penguin", false, true));
+            print(birds, bird -> !bird.canSwim()); // pass class that does check
+        }
+    
+        private static void print(List<Bird> birds, CheckFly<Bird> checker) {
+            for (Bird bird : birds) {
+                if (checker.test(bird))
+                    System.out.println(bird + " ");
+            }
+            System.out.println();
+        }
+    }
+    ```
+    
+### Summary
+    - Java methods start with an access modifier of public, private, protected or blank (default access)
+    - There are optional specifier such as static, final, or abstract
+    - The return type, which is void or a Java type.
+    - The method name follows, using standard Java identifier rules
+    - Zero or more parameters go in parentheses as the parameter list
+    - Zero or more parameters go in parentheses as the parameter list
+    - Optional exception types
+    - Finally, zero or more statements go in braces to make up the method body.
+    
+    - __private__ access means available in the same class
+    - __Default (package private)__ access means available within the same package
+    - __protected__ the same package or subclasses
+    - __public__ means available anywhere
+    - Static methods and static variables are shared by the class. When referenced outside class, 
+      they called using class name StaticClass.method()
+    - Instance members can call static members, but static members can not call instance
+    - Static imports are used to import static members.
+    
+    - Java uses pass-by-value, which means that calls to methods create a copy of the parameters. 
+      Assigning new values to those parameters in the method doesn’t affect the caller’s variables. 
+      Calling methods on objects that are method parameters changes the state of those objects and
+      is reflected in the caller.
+    - Overloaded methods are methods with the same name but a different parameter list. 
+      Java calls the most specific method it can find.
+    
+    - Constructors are used to instantiate new objects. The default no-argument constructor
+      is called when no constructor is coded.
+    - Multiple constructors are allowed and can call each other by writing this(). 
+      If this() is present, it must be the first statement in the constructor.
+    - __this__ write before variable name to indicate instance variables or method parameter
+    - The order of initialization is the superclass; static variables and static initializers in the order they appear; 
+      instance variables and instance initializers in the order they appear; and finally the constructor.
+      
+    - Encapsulation refers to preventing callers from changing the instance variables
+      by making instance variables private and getters/setters public. 
+    - Remove setter to make class immutable, instantiate new objects by constructors
+    - JavaBeans use methods beginning with is and get for boolean and non-boolean property types, respectively. 
+      Methods beginning with set are used for setters.
+      
+    - Lambdas are passed to a method expecting an inter- face with one method. Predicate is a common interface.

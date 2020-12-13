@@ -1,4 +1,4 @@
-package com.sonnth.constructor;
+package com.sonnth.chapter4.constructor;
 
 public class InitializationOrder {
     private String name = "Torchie";
