@@ -1,4 +1,4 @@
-package com.sonnth.string;
+package com.sonnth.chapter3.string;
 
 public class StringMethod {
     String btoh = "abcd" + 1; //abcd1

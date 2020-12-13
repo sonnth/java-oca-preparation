@@ -1,4 +1,4 @@
-package com.sonnth.operators;
+package com.sonnth.chapter2.operators;
 
 public enum OperatorEnum {
     AND,

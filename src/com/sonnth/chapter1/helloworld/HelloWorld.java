@@ -1,4 +1,4 @@
-package com.sonnth.helloworld;
+package com.sonnth.chapter1.helloworld;
 
 public class HelloWorld {
     public static void helloFrom(String name) {

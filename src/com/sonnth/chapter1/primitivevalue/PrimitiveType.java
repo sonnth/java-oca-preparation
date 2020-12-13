@@ -1,4 +1,4 @@
-package com.sonnth.primitivevalue;
+package com.sonnth.chapter1.primitivevalue;
 
 public class PrimitiveType {
     public static void main(String[] args) {

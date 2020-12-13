@@ -1,4 +1,4 @@
-package com.sonnth.statement.ifesle;
+package com.sonnth.chapter2.statement.ifesle;
 
 public class IfElse {
     public static void main(String[] args) {

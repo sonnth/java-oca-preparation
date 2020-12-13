@@ -1,4 +1,4 @@
-package com.sonnth.buildingblock;
+package com.sonnth.chapter1.buildingblock;
 
 //import java.sql.Date;
 import java.util.Date;

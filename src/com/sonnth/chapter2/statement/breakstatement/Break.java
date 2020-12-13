@@ -1,4 +1,4 @@
-package com.sonnth.statement.breakstatement;
+package com.sonnth.chapter2.statement.breakstatement;
 
 public class Break {
     public static void main(String[] args) {

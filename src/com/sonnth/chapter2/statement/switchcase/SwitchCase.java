@@ -1,4 +1,4 @@
-package com.sonnth.statement.switchcase;
+package com.sonnth.chapter2.statement.switchcase;
 
 public class SwitchCase {
     public static void main(String[] args) {

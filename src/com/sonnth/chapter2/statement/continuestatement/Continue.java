@@ -1,4 +1,4 @@
-package com.sonnth.statement.continuestatement;
+package com.sonnth.chapter2.statement.continuestatement;
 
 public class Continue {
     public static void main(String[] args) {

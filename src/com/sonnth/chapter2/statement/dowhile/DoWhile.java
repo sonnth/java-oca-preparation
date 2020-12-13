@@ -1,4 +1,4 @@
-package com.sonnth.statement.dowhile;
+package com.sonnth.chapter2.statement.dowhile;
 
 public class DoWhile {
 

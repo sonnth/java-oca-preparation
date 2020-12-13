@@ -1,4 +1,4 @@
-package com.sonnth.statement.forloop;
+package com.sonnth.chapter2.statement.forloop;
 
 public class For {
 

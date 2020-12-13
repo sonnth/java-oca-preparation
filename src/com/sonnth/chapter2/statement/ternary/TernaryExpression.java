@@ -1,4 +1,4 @@
-package com.sonnth.statement.ternary;
+package com.sonnth.chapter2.statement.ternary;
 
 public class TernaryExpression {
     public static void main(String[] args) {
