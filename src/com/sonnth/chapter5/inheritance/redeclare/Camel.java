@@ -1,4 +1,4 @@
-package com.sonnth.chapter5.overrideoverload.redeclare;
+package com.sonnth.chapter5.inheritance.redeclare;
 
 public class Camel {
     private String getNumberOfHumps() {

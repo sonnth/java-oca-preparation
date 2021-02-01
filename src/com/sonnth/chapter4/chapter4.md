@@ -464,7 +464,7 @@
     Setter methods begin with set. |  public void setHappy(boolean happy) { this.happy = happy;}
     The method name must have a prefix of set/get/is, followed by the first letter of the property in uppercase, followed by the rest of the property name. | public void setNumEggs(int num) { numEggs = num;}
 
-    </br>
+    <br>
 
     **Creating Immutable Classes**
 
